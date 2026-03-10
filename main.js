@@ -116,6 +116,23 @@ authGrid.appendChild(card);
 io.observe(card);
 });
 
+// ─── LAZY TIMESERIES LOADER ───────────────────────────────────
+const TS_FILE = {
+MHMH:     ‘data-ts-mhmh.js’,
+APDH:     ‘data-ts-apdh.js’,
+Combined: ‘data-ts-combined.js’,
+};
+
+function loadTS(site) {
+return new Promise((resolve) => {
+if (TS_CACHE[site]) return resolve(TS_CACHE[site]);
+const script = document.createElement(‘script’);
+script.src = TS_FILE[site];
+script.onload = () => resolve(TS_CACHE[site]);
+document.head.appendChild(script);
+});
+}
+
 // ─── CHART HELPERS ───────────────────────────────────────────
 function makeBarChart(id, labels, prePre, postData, yLabel = ‘’, titleText = ‘’) {
 const ctx = document.getElementById(id);
@@ -223,7 +240,7 @@ y: { beginAtZero: true, grid: { color: ‘rgba(0,0,0,0.05)’ }, title: { displa
 (function() {
 const ctx = document.getElementById(‘orderChart’);
 if (!ctx) return;
-const orders = RESEARCH_DATA.orders;
+const orders = META.orders;
 
 // Bin doses into buckets
 const bins = [1,2,3,4,5,6,7,‘8+’];
@@ -285,7 +302,7 @@ const CROSSOVER_START = new Date(‘2021-06-22’);
 const CROSSOVER_END = new Date(‘2021-10-22’);
 
 function buildTSData(site, metric) {
-const rows = RESEARCH_DATA.timeseries[site] || [];
+const rows = TS_CACHE[site] || [];
 const m = metricMap[metric];
 const pts = rows.map(r => ({ x: r.d, y: r[m.key], period: r.p }));
 return { pts, m };
@@ -310,9 +327,14 @@ const std = Math.sqrt(vals.map(v => (v-mean)**2).reduce((a,b)=>a+b,0)/vals.lengt
 return mean + n * std;
 }
 
-function renderTSChart(site, metric) {
+async function renderTSChart(site, metric) {
 const ctx = document.getElementById(‘tsChart’);
 if (!ctx) return;
+
+// Show loading state
+ctx.style.opacity = ‘0.3’;
+await loadTS(site);
+ctx.style.opacity = ‘1’;
 const { pts, m } = buildTSData(site, metric);
 const rolled = computeRolling(pts, 7);
 
@@ -441,7 +463,7 @@ renderTSChart(currentSite, currentMetric);
 (function() {
 const ctx = document.getElementById(‘painChart’);
 if (!ctx) return;
-const pd = RESEARCH_DATA.pain_scores;
+const pd = META.pain_scores;
 new Chart(ctx, {
 type: ‘line’,
 data: {
