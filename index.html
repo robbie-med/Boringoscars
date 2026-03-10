@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BORING OSCARS — Opioid Stewardship in Rural Hospitals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Libre+Franklin:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- GRAIN OVERLAY -->
+
+  <div class="grain"></div>
+
+  <!-- NAV -->
+
+  <nav id="nav">
+    <div class="nav-brand">BORING OSCARS</div>
+    <ul class="nav-links">
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#timeseries">Time Series</a></li>
+      <li><a href="#pain">Pain Scores</a></li>
+      <li><a href="#methods">Methods</a></li>
+      <li><a href="#authors">Authors</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero" id="top">
+    <div class="hero-bg-text">OPIOIDS</div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Reg Anesth Pain Med · January 2026</span>
+      </div>
+      <h1 class="hero-title">
+        Better Opioid<br/>
+        <em>Responsibility</em>
+      </h1>
+      <p class="hero-subtitle">
+        Implementing novel guidance as an opioid standard of care<br/>
+        in academic and rural settings
+      </p>
+      <div class="hero-authors">
+        Amell F, Sikora R, Beaudry JR, Lang P, Mercado J, Johnston S, Greene S, Wenz C, Ward M, Martinez Camblor P, Sites BD, Radovanovic M, Brackett C, Gale S, Ackerman A
+      </div>
+      <div class="hero-affiliation">Dartmouth-Hitchcock Medical Center &amp; Alice Peck Day Memorial Hospital · Lebanon, NH</div>
+
+```
+  <!-- BIG STATS ROW -->
+  <div class="hero-stats">
+    <div class="stat-card stat-primary" data-target="73" data-suffix="%">
+      <div class="stat-number"><span class="count">0</span><span>%</span></div>
+      <div class="stat-label">Reduction in IV<br/>Opioid Doses</div>
+      <div class="stat-p">p&lt;0.001</div>
+    </div>
+    <div class="stat-card" data-target="47" data-suffix="%">
+      <div class="stat-number"><span class="count">0</span><span>%</span></div>
+      <div class="stat-label">Reduction in<br/>Total Opioid MME</div>
+      <div class="stat-p">p&lt;0.001</div>
+    </div>
+    <div class="stat-card" data-target="68" data-suffix="%">
+      <div class="stat-number"><span class="count">0</span><span>%</span></div>
+      <div class="stat-label">Reduction in<br/>Parenteral MME</div>
+      <div class="stat-p">p&lt;0.001</div>
+    </div>
+    <div class="stat-card stat-neutral">
+      <div class="stat-number">↔</div>
+      <div class="stat-label">Pain Scores<br/><em>Not Worsened</em></div>
+      <div class="stat-p">Balancing measure</div>
+    </div>
+  </div>
+</div>
+<div class="hero-scroll">scroll to explore ↓</div>
+```
+
+  </header>
+
+  <!-- ABSTRACT -->
+
+  <section id="abstract" class="section section-abstract">
+    <div class="container">
+      <div class="section-label">01 — Abstract</div>
+      <div class="abstract-grid">
+        <div class="abstract-main">
+          <h2>Background</h2>
+          <p>Intravenous opioids have a faster onset and greater euphoric potential than oral or subcutaneous routes, with observational studies linking inpatient intravenous exposure to higher odds of subsequent opioid-related harms. An urban academic opioid standard prioritized oral and subcutaneous administration and reduced intravenous exposure by 84% without compromised pain control.</p>
+          <p>Considering that rural hospitals face unique challenges in opioid stewardship, we implemented this opioid standard in two rural hospitals, hypothesizing that favoring oral and subcutaneous opioids over intravenous would reduce parenteral opioid use without increasing pain scores.</p>
+          <h2>Conclusion</h2>
+          <p>Implementing an opioid standard prioritizing oral and subcutaneous routes in two rural hospitals achieved a <strong>73% reduction in intravenous opioid administration</strong> and a <strong>47% reduction in total opioid use</strong> without worsening pain control. These findings replicate a prior urban, academic study and demonstrate scalability in rural hospitals, including a critical access hospital.</p>
+        </div>
+        <div class="abstract-sidebar">
+          <div class="info-block">
+            <div class="info-label">Study Design</div>
+            <div class="info-value">Pre–Post Quality Improvement</div>
+          </div>
+          <div class="info-block">
+            <div class="info-label">Sites</div>
+            <div class="info-value">Academic Medical Center (460 beds)<br/>Critical Access Hospital (25 beds)</div>
+          </div>
+          <div class="info-block">
+            <div class="info-label">Total Patient-Days</div>
+            <div class="info-value">15,749</div>
+          </div>
+          <div class="info-block">
+            <div class="info-label">DOI</div>
+            <div class="info-value"><a href="https://doi.org/10.1136/rapm-2025-106699" target="_blank">10.1136/rapm-2025-106699</a></div>
+          </div>
+          <div class="info-block">
+            <div class="info-label">Ethics</div>
+            <div class="info-value">QI Project — IRB waiver granted<br/>DH-HRPP STUDY02002801</div>
+          </div>
+          <div class="info-block">
+            <div class="info-label">Funding</div>
+            <div class="info-value">No external funding</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY RESULTS TABLE -->
+
+  <section id="results" class="section section-results">
+    <div class="container">
+      <div class="section-label">02 — Primary Results</div>
+      <h2 class="section-title">Opioid Use Metrics</h2>
+      <p class="section-desc">Aggregated data across both sites (15,749 patient-days). Data presented as rates per patient-day unless otherwise specified.</p>
+
+```
+  <div class="table-wrapper">
+    <table class="results-table" id="resultsTable">
+      <thead>
+        <tr>
+          <th>Outcome</th>
+          <th>Pre-Implementation</th>
+          <th>Post-Implementation</th>
+          <th>Change</th>
+          <th>P Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-group"><td colspan="5">Patient Demographics</td></tr>
+        <tr>
+          <td>Number of patients</td>
+          <td>347</td><td>263</td>
+          <td class="neg">−84 (−24%)</td><td>—</td>
+        </tr>
+        <tr>
+          <td>Patient-days</td>
+          <td>7,846</td><td>7,903</td>
+          <td class="pos">+57 (+1%)</td><td>—</td>
+        </tr>
+        <tr>
+          <td>Age, mean (SD)</td>
+          <td>63.6 (16.6)</td><td>64.2 (16.9)</td>
+          <td>+0.6</td><td>0.69</td>
+        </tr>
+        <tr class="row-group"><td colspan="5">Intravenous Opioid Doses (per patient-day)</td></tr>
+        <tr class="highlight-row">
+          <td>Mean (95% CI)</td>
+          <td>0.158 (0.14–0.18)</td>
+          <td>0.043 (0.03–0.05)</td>
+          <td class="neg big"><span class="delta-badge">−73%</span></td>
+          <td class="sig">&lt;0.001</td>
+        </tr>
+        <tr>
+          <td>Median (IQR)</td>
+          <td>0.07 (0.0–0.22)</td>
+          <td>0.0 (0.0–0.03)</td>
+          <td class="neg">−0.07</td>
+          <td class="sig">&lt;0.001</td>
+        </tr>
+        <tr class="row-group"><td colspan="5">Parenteral (IV + SQ) Doses (per patient-day)</td></tr>
+        <tr class="highlight-row">
+          <td>Mean (95% CI)</td>
+          <td>0.16 (0.14–0.18)</td>
+          <td>0.11 (0.09–0.13)</td>
+          <td class="neg big"><span class="delta-badge">−31%</span></td>
+          <td class="sig">&lt;0.001</td>
+        </tr>
+        <tr class="row-group"><td colspan="5">Total Opioid Doses (per patient-day)</td></tr>
+        <tr class="highlight-row">
+          <td>Mean (95% CI)</td>
+          <td>0.91 (0.85–0.96)</td>
+          <td>0.70 (0.65–0.75)</td>
+          <td class="neg big"><span class="delta-badge">−24%</span></td>
+          <td class="sig">&lt;0.001</td>
+        </tr>
+        <tr class="row-group"><td colspan="5">Parenteral Opioid MME (per patient-day)</td></tr>
+        <tr class="highlight-row">
+          <td>Mean (95% CI)</td>
+          <td>1.95 (1.61–2.29)</td>
+          <td>0.62 (0.49–0.75)</td>
+          <td class="neg big"><span class="delta-badge">−68%</span></td>
+          <td class="sig">&lt;0.001</td>
+        </tr>
+        <tr class="row-group"><td colspan="5">Total Opioid MME (per patient-day)</td></tr>
+        <tr class="highlight-row">
+          <td>Mean (95% CI)</td>
+          <td>14.46 (13.51–15.41)</td>
+          <td>7.65 (7.07–8.23)</td>
+          <td class="neg big"><span class="delta-badge">−47%</span></td>
+          <td class="sig">&lt;0.001</td>
+        </tr>
+        <tr class="row-group"><td colspan="5">Serial Dosing</td></tr>
+        <tr>
+          <td>Mean doses per IV order</td>
+          <td>3.4 (2.9–3.9)</td>
+          <td>2.6 (2.3–2.9)</td>
+          <td class="neg big"><span class="delta-badge">−24%</span></td>
+          <td class="sig">0.038</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bar chart comparison -->
+  <div class="charts-grid-2">
+    <div class="chart-card">
+      <h3>Mean IV Doses per Patient-Day</h3>
+      <div class="chart-wrap"><canvas id="ivChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Mean Total MME per Patient-Day</h3>
+      <div class="chart-wrap"><canvas id="mmeChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Route Distribution — AMC (MHMH)</h3>
+      <div class="chart-wrap"><canvas id="routeAmcChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Doses per IV Opioid Order</h3>
+      <div class="chart-wrap"><canvas id="orderChart"></canvas></div>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- TIME SERIES -->
+
+  <section id="timeseries" class="section section-timeseries">
+    <div class="container">
+      <div class="section-label">03 — Time Series Analysis</div>
+      <h2 class="section-title">Process Control Charts</h2>
+      <p class="section-desc">Daily IV opioid doses per patient-day over the full study period. The intervention was implemented at APD (CAH) first, followed by MHMH 1E (AMC). The crossover period (June 22 – October 22, 2021) represents phased implementation.</p>
+
+```
+  <div class="ts-controls">
+    <button class="ts-btn active" data-site="MHMH">AMC (MHMH 1E)</button>
+    <button class="ts-btn" data-site="APDH">CAH (APD)</button>
+    <button class="ts-btn" data-site="Combined">Combined</button>
+    <div class="ts-metric-select">
+      <label>Metric:</label>
+      <select id="tsMetric">
+        <option value="iv">IV Doses/patient-day</option>
+        <option value="total">Total Doses/patient-day</option>
+        <option value="mme_total">Total MME/patient-day</option>
+        <option value="mme_par">Parenteral MME/patient-day</option>
+        <option value="par">Parenteral Doses/patient-day</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="chart-card chart-card-wide">
+    <div class="chart-wrap chart-wrap-tall"><canvas id="tsChart"></canvas></div>
+    <div class="ts-legend">
+      <span class="leg-item leg-pre">Pre-Implementation</span>
+      <span class="leg-item leg-cross">Crossover Period</span>
+      <span class="leg-item leg-post">Post-Implementation</span>
+    </div>
+  </div>
+
+  <div class="timeline-explainer">
+    <div class="tl-item">
+      <div class="tl-dot tl-dot-pre"></div>
+      <div>
+        <strong>Pre-Implementation</strong>
+        <p>CAH: Sep 22, 2020 – Jun 21, 2021<br/>AMC: Jan 22 – Jun 21, 2021</p>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-item">
+      <div class="tl-dot tl-dot-cross"></div>
+      <div>
+        <strong>Crossover Period</strong>
+        <p>Jun 22 – Oct 22, 2021<br/>CAH live; AMC transitioning</p>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-item">
+      <div class="tl-dot tl-dot-post"></div>
+      <div>
+        <strong>Post-Implementation</strong>
+        <p>Oct 23, 2021 – Oct 22, 2022<br/>Both sites fully implemented</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- PAIN SCORES -->
+
+  <section id="pain" class="section section-pain">
+    <div class="container">
+      <div class="section-label">04 — Balancing Measure</div>
+      <h2 class="section-title">Pain Score Analysis</h2>
+      <p class="section-desc">Mean pain scores across the first 5 hospital days for a sub-cohort of patients receiving opioids at the AMC (3 months into study period). P-values from independent t-tests.</p>
+
+```
+  <div class="pain-grid">
+    <div class="chart-card">
+      <h3>Mean Pain Scores by Hospital Day</h3>
+      <div class="chart-wrap"><canvas id="painChart"></canvas></div>
+    </div>
+    <div class="pain-side">
+      <div class="pain-callout">
+        <div class="callout-icon">✓</div>
+        <div class="callout-text">
+          <strong>Pain Control Maintained</strong>
+          <p>Pain scores did not increase post-intervention — the primary balancing measure was met. Scores were numerically lower post-intervention on all days (p&lt;0.05), likely reflecting improved overall care.</p>
+        </div>
+      </div>
+      <table class="pain-table">
+        <thead>
+          <tr><th>Day</th><th>Pre (n=146)</th><th>Post (n=80)</th><th>Δ</th><th>p</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>4.9</td><td>3.9</td><td class="neg">−1.0</td><td class="sig">0.026</td></tr>
+          <tr><td>2</td><td>4.4</td><td>3.4</td><td class="neg">−1.0</td><td class="sig">0.013</td></tr>
+          <tr><td>3</td><td>4.2</td><td>3.3</td><td class="neg">−0.9</td><td class="sig">0.012</td></tr>
+          <tr><td>4</td><td>4.2</td><td>3.2</td><td class="neg">−1.0</td><td class="sig">0.011</td></tr>
+          <tr><td>5</td><td>4.2</td><td>3.1</td><td class="neg">−1.1</td><td class="sig">0.004</td></tr>
+        </tbody>
+      </table>
+      <p class="pain-note">* Sub-cohort analysis at AMC only. Combined cohort showed no significant change in pain scores, consistent with the hypothesis that pain would not worsen.</p>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- METHODS -->
+
+  <section id="methods" class="section section-methods">
+    <div class="container">
+      <div class="section-label">05 — Methods</div>
+      <h2 class="section-title">Study Design &amp; Intervention</h2>
+
+```
+  <div class="methods-grid">
+    <div class="method-card">
+      <div class="method-icon">🏥</div>
+      <h3>Sites</h3>
+      <p><strong>Academic Medical Center (AMC):</strong> Mary Hitchcock Memorial Hospital, Unit 1E — 460-bed rural tertiary center. 30-bed general medical unit.</p>
+      <p><strong>Critical Access Hospital (CAH):</strong> Alice Peck Day Memorial Hospital — 25-bed rural CAH with 50–75% subacute rehabilitation patients.</p>
+    </div>
+    <div class="method-card">
+      <div class="method-icon">📋</div>
+      <h3>Intervention (BORING OSCARS)</h3>
+      <p>Oral route preferred for patients capable of oral intake. Subcutaneous route preferred when parenteral opioids were necessary.</p>
+      <p>Education delivered to clinicians, nurses, and pharmacists. Audit and feedback via Epic "Workbench" EMR reporting. Systematic screening of patients with active IV opioid orders.</p>
+    </div>
+    <div class="method-card">
+      <div class="method-icon">📊</div>
+      <h3>Outcomes</h3>
+      <p><strong>Primary:</strong> IV opioid doses per patient-day</p>
+      <p><strong>Secondary:</strong> Parenteral and total opioid MME per patient-day; doses per IV order</p>
+      <p><strong>Balancing:</strong> Numeric Pain Score (0–10) over first 5 hospital days</p>
+    </div>
+    <div class="method-card">
+      <div class="method-icon">🔬</div>
+      <h3>Participants</h3>
+      <p>All patients on the hospital medicine service who received opioids and spent one or more midnights. 55 hospital medicine providers rotating between both sites.</p>
+      <p>Pre–post design; 15,749 patient-days total across 848 study days. No randomization.</p>
+    </div>
+    <div class="method-card">
+      <div class="method-icon">📅</div>
+      <h3>Timeline</h3>
+      <p><strong>CAH pre:</strong> Sep 22, 2020 – Jun 21, 2021 (9 months)</p>
+      <p><strong>AMC pre:</strong> Jan 22 – Jun 21, 2021 (5 months)</p>
+      <p><strong>Crossover:</strong> Jun 22 – Oct 22, 2021</p>
+      <p><strong>Post (both):</strong> Oct 23, 2021 – Oct 22, 2022</p>
+    </div>
+    <div class="method-card">
+      <div class="method-icon">📐</div>
+      <h3>Statistics</h3>
+      <p>Descriptive statistics at patient level. Categorical variables: χ² test. Continuous variables: Welch's t-test (normal) or Wilcoxon rank-sum (non-normal).</p>
+      <p>Shapiro-Wilk test for normality. Two-tailed p-values; significance at p &lt; 0.05.</p>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- NON-HOSPITALIST DATA -->
+
+  <section class="section section-supplement">
+    <div class="container">
+      <div class="section-label">06 — Supplementary Data</div>
+      <h2 class="section-title">Non-Hospitalist Orders</h2>
+      <p class="section-desc">Supplementary Table 2: Opioid doses from non-hospitalist providers (e.g., anesthesiologists) were tracked as a sensitivity analysis. The ratio of non-hospitalist to hospitalist orders was 0.00027 pre- and 0.00025 post-intervention, confirming intervention fidelity.</p>
+
+```
+  <div class="charts-grid-2">
+    <div class="chart-card">
+      <h3>AMC — Non-Hospitalist Doses/Patient-Day</h3>
+      <div class="chart-wrap"><canvas id="nonHospAmcChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>CAH — Non-Hospitalist Doses/Patient-Day</h3>
+      <div class="chart-wrap"><canvas id="nonHospCahChart"></canvas></div>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- AUTHORS -->
+
+  <section id="authors" class="section section-authors">
+    <div class="container">
+      <div class="section-label">07 — Authors &amp; Affiliations</div>
+      <h2 class="section-title">Research Team</h2>
+
+```
+  <div class="authors-grid" id="authorsGrid"></div>
+
+  <div class="cite-block">
+    <div class="cite-label">Cite this article</div>
+    <div class="cite-text">Amell F, Sikora R, Beaudry JR, et al. Better opioid responsibility: implementing novel guidance as an opioid standard of care in academic and rural settings. <em>Reg Anesth Pain Med</em> 2026;0:1–3. doi:10.1136/rapm-2025-106699</div>
+    <button class="copy-btn" id="copyBtn">Copy Citation</button>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">BORING OSCARS</div>
+          <div class="footer-sub">Better Opioid Responsibility: Implementing Novel Guidance as an Opioid Standard of Care in Academic and Rural Settings</div>
+        </div>
+        <div class="footer-links">
+          <a href="https://doi.org/10.1136/rapm-2025-106699" target="_blank">DOI Link</a>
+          <a href="mailto:fredrik.amell@hitchcock.org">Contact Author</a>
+        </div>
+      </div>
+      <div class="footer-note">© 2026 American Society of Regional Anesthesia &amp; Pain Medicine. Published by BMJ Group. No commercial re-use.</div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
